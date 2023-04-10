@@ -136,7 +136,11 @@ Gaia's approach to decentralization focuses on user-control of data and storage.
 
 #### b) Alternative storage system
 
-The Apps objectives could suggest to use alternative solution to store data associated to a BNS name.  The option of using distributed file system like IPFS, or Arweave, or messaging services like Mastodon, or Matrix, among other type storage services, will be an area of intensive growth in the next years as the decentralization process turns mainstream.  Essentially, these technologies will try bring to market the capacities of the design of Distributed Databases.   
+The Apps objectives could suggest to use alternative solution to store data associated to a BNS name.  The option of using distributed file system like IPFS, or Arweave, or messaging services like Mastodon, or Matrix, among other type storage services, will be an area of intensive growth in the next years as the decentralization process turns mainstream.  
+
+#### c) Essentially, these technologies will try bring to market the capacities of the design of Distributed Databases.   
+
+A proposal of extending Stacks component was proposed in this study (https://github.com/paradigma-cl/stackscomponents).
 
 ### 6.	Blockchain Inscription service
 Immutability is an attribute that Blockchain technology offers to world society.  A transaction, and/or the execution of a smart contract that cannot be alterred.
