@@ -157,7 +157,7 @@ In the case of DID subdomain names is different, as the list maintained under it
 ### 8.	Increasing the BNS or DID utility
 Nowadays, the most common use for the blockchain, agreed by several country’s Central Banks, it is its capacity to make cross border assets transfer efficiently.
 
-Lately, the exchange of pieces of art using non fungible tokens, and similarly Ordinals in the Bitcoin network, have attracted the attention generating high level of transaction traffic.
+Lately, the exchange of pieces of digital art using non fungible tokens, and similarly Ordinals in the Bitcoin network, have attracted the attention generating high level of transaction traffic.
 
 Nevertheless, the use of decentralized ID (DIDs) has not been understood well, and used as it should be.
 
