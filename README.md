@@ -63,6 +63,9 @@ This strategy is ratified by a recent proposal in using a new DID method in conj
 Typically, the domain and subdomain names have commonly used Latin characters in ascii format.  Due to the convergence of the use of different languages, and character systems, the popularity in social apps, people have started to think about using emoji as names for their domains or subdomains.  The compatibility of the dapps with Punycode could be a facilitator of mass user adoption.
 For example: 🧑‍💼 .xck.app is represented as xn-- -zc3sr5i.xck.app
 
+#### 2.4 Extending the use the private public keys for both Stacks and Bitcoin blockchain
+In order to have higher level of adoption, increases the desire to have communications, and interoperability between users cross blockchains ecosystems like Stacks, and Bitcoin.  One example, is Nostr, that uses the public key as unique identifier, that is linked to the DNS. 
+
 ### 3.	The App Profile
 Each App (web application) should have a verified identity in order to safely reference it and be trustworthy of interaction between other applications.
 An app can be identified both by the Internet domain (DNS) for example 'XCK.app' and the Stacks DID 'XCK.app' In case, it is a web application, it could be accessed as https://xck.app having both definitions.
@@ -152,7 +155,7 @@ The Stacks blockchain smart contracts can leverage the usability of the Bitcoin 
 Inscriptions could be leverage with the use of did:web for the users, and apps.  An app inscription or an inscription executed by a user could be accessed publicly by a web service using the did:web protocol.  So ideally, blockchain inscriptions could be turned into a standard.  This standard could boost usability among other applications that reference this blockchain inscriptions.
 
 ### 7.	DID Domain and subdomain name Exchange of ownership
-A market of exchange of DID domain name is already operating.  Since the BNS lets any domain name owner to transfer its property to another user, there has been interest specially among early adopters to save some “key” names for future users, also as the STX exchange value is still low.  There has been some proposal to change the behaviour of the BNS to facilitate storing list of domain names for future exchange.
+A market of exchange of DID domain name is already operating.  Since the BNS lets any domain name owner to transfer its property to another user, there has been interest specially among early adopters to save some “key” names for future users, also as the STX exchange value is still low.  There has been some proposal to change the behaviour of the BNS to facilitate storing list of domain names for future exchange. An example of an application that tries to help manage and saving different DID domain names is BNSx.
 
 In the case of DID subdomain names is different, as the list maintained under its DID domain name in the zone file.   Each DID subdomain name owns its own zone file specification, profile file, and its valid hash. The owner of the DID domain name is the only one that can update the list of subdomains under its domain name.   For the exchange of subdomain name between one user to another, the domain name owner must provide a service to transfer its ownership, and executes in behalf of the owner.
  
