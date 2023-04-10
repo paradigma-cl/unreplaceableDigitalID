@@ -145,7 +145,9 @@ A proposal of extending Stacks component was proposed in this study (https://git
 ### 6.	Blockchain Inscription service
 Immutability is an attribute that Blockchain technology offers to world society.  A transaction, and/or the execution of a smart contract that cannot be alterred.
 
-This attribute of immutability could transformed in an inscription service applied to different purposes.  The first example of this type of service is the BNS, and the second NFT inscriptions for art or music work. Other examples taken from XCK.app are the business agreements inscriptions, payments, and business deliverables inscriptions.  Ordinal inscription is another emerging inscription type.  
+This attribute of immutability could transformed in an inscription service applied to different purposes.  The first example of this type of service is the BNS, and the second NFT inscriptions for art or music work. Other examples taken from XCK.app are the business agreements inscriptions, payments, and business deliverables inscriptions.  Ordinal inscription is another emerging inscription type.
+
+The Stacks blockchain smart contracts can leverage the usability of the Bitcoin ecosystem, in particular could help manage the inscription process of Ordinals that has started recently. An inscription is not sufficient as a solution of being the first doing it.  It should have management rules, that users abide to, in order to have real meaning, and value.
 
 Inscriptions could be leverage with the use of did:web for the users, and apps.  An app inscription or an inscription executed by a user could be accessed publicly by a web service using the did:web protocol.  So ideally, blockchain inscriptions could be turned into a standard.  This standard could boost usability among other applications that reference this blockchain inscriptions.
 
