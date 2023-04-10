@@ -1,5 +1,5 @@
 # unreplaceableDigitalID
-##Your Digital ID or the Digital ID of your organization must be unreplaceable.  
+## Your Digital ID or the Digital ID of your organization must be unreplaceable.  
 CrossCheck by Paradigma
 Your Digital ID or the Digital ID of your organization must be unreplaceable.  We must enjoy a secure world, peaceful, and without setbacks produced by hackers or identity theft.
 DNS and social media are based on the Internet domain name system, names are globally unique and human-readable, but not strongly owned. The system operator has the final say as to what each name resolves to.  This requires that client must trust the system, and trust that the administrators are the only ones that can make these changes.
