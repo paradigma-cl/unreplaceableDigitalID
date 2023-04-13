@@ -1,7 +1,7 @@
-# unreplaceableDigitalID
-## Your Digital ID or the Digital ID of your organization must be unreplaceable.  
+# irreplaceableDigitalID
+## Your Digital ID or the Digital ID of your organization must be irreplaceable.  
 ### prepared by CrossCheck-Paradigma
-Your Digital ID or the Digital ID of your organization must be unreplaceable.  We must enjoy a secure world, peaceful, and without setbacks produced by hackers or identity theft.
+Your Digital ID or the Digital ID of your organization must be irreplaceable.  We must enjoy a secure world, peaceful, and without setbacks produced by hackers or identity theft.
 
 DNS and social media are based on the Internet domain name system, names are globally unique and human-readable, but not strongly owned. The system operator has the final say as to what each name resolves to.  This requires that client must trust the system, and trust that the administrators are the only ones that can make these changes.
 In PGP, names are key IDs.  PGP is short for Pretty Good Privacy, a security program that enables users to communicate securely by decrypting and encrypting messages, authenticating messages through digital signatures, and encrypting files. They are globally unique and cryptographically owned, but not human-readable. PGP key IDs are derived from the keys they reference. But these names are difficult for most users to remember since they do not carry semantic information relating to their use in the system.
