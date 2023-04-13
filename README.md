@@ -27,7 +27,7 @@ Names in BNS have four properties:
 ### 1.	Blockchain network interoperability
 A user private and public keys are based from the mathematical, and cryptographical algorithm, and they are base to use it in the Stacks or Bitcoin blockchain.
 
-From a private key the user can derive a decidable public key in a Stacks address format, and in several Bitcoin addresses format.  Actual Stacks 2.1 have methods acceptinng more BTC address formats (P2PKH, P2SH, P2WPKH, P2WSH, P2TR). A Stacks address starts with a “SP”.  Initially, the Bitcoin address was based on the legacy address P2PKH starting with a “1”, the actual ones are based on SegWit address P2WPKH starting with a “bc1”, and Taproot address when massively available starting with a “bc1p”.  These addresses are mathematically or cryptographically linked together as one or the same, but they are used in the Stacks or Bitcoin blockchain ecosystem respectively.
+From a private key the user can derive a decidable public key in a Stacks address format, and in several Bitcoin addresses format.  Actual Stacks 2.1 have methods accepting more BTC address formats (P2PKH, P2SH, P2WPKH, P2WSH, P2TR). A Stacks address starts with a “SP”.  Initially, the Bitcoin address was based on the legacy address P2PKH starting with a “1”, the actual ones are based on SegWit address P2WPKH starting with a “bc1”, and Taproot address when massively available starting with a “bc1p”.  These addresses are mathematically or cryptographically linked together as one or the same, but they are used in the Stacks or Bitcoin blockchain ecosystem respectively.
 
 The Stacks blockchain ensures that each node's BNS view is synchronized to all of the other nodes in the world, so queries on one node will be the same on other nodes. Stacks blockchain nodes allow a name's owner to bind up to 40Kb of off-chain state to their name, which will be replicated to all other Stacks blockchain nodes via a P2P network.
 
@@ -73,7 +73,7 @@ An app can be identified both by the Internet domain (DNS) for example 'XCK.app'
 The description for an App Profile document is done using a JSON web token based on the WebApplication Schema object (https://schema.org/WebApplication).
 Additionally, this App Profile document must include the did-method-web. The example is represented as 'did:web:xck.app'. The target system of the Web DID method is the web host that the domain name described by the DID resolves to when queried through the Domain Name System (DNS). This did-method-web is included in this app profile.
 
-It could be useful to have a way to retrieve a verifiable DID profile for the Aspp as recommended by the W3C using an URI. For example, a web URI https://xck.app?profile
+It could be useful to have a way to retrieve a verifiable DID profile for the App as recommended by the W3C using an URI. For example, a web URI https://xck.app?profile
 In this case, the application should also return a JSON web token using the protocol previously mentioned.
 
 Example of the WebApplication JSON web token included in the profile for 'XCK.app'
