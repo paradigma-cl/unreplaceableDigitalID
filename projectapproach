@@ -11,4 +11,18 @@ The BNS names used as user profiles can be used as Single Sign On to thousands o
 
 ## Methodology
 To achieve this, we have defined a high level vision, specify the problem, and specify how to solve the problem with Internet, Blockchain, BNS, DID:WEB, user web presence and as Single Sign On solution.
-
+Steps
+### 1. Definition of a public accessible app’s profile and app user’s profile
+      Deliverables
+          Revised definition of the profiles did:web for the app's and app's users profiles.
+### 2. Develop the App and User Profile code
+      Deliverables
+          Replit extensions in REACT javascript containing web presence for the did:web associated to the app or user profiles.
+          Replit extensions in REACT javascript containing the functionalities to create or update the app or user profiles.
+### 3. Develop a prototype of a user owned Application Single Sign On (SSO) based on did:web
+       Deliverables
+          Javascript code for the verification of a user functionality
+          Javascript code for the authentication of a user to an application
+### 4. A SIP proposal, Clarity trait, and examples for Blockchain Inscription service
+          for Empowering the DID’s with Proof of the user National Identity
+          for Agreements, Deliverables, and reference documents
