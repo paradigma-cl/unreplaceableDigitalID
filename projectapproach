@@ -1,0 +1,14 @@
+# Project Approach & Mission
+## Peers looking for trust in the digitalverse
+
+## Approach
+Complete the development of the BNS functionalities associated to the zone files, profile.json, user and application profiles, did:web definitions, user web presence, application integration, and the verification and authentication of applications as SSO. Some of the code to be developed is to be used by applications in order to access the user profiles publicly.  Other code to be developed is to be used by the user of an application.
+The developed code will be published as Replit extensions.
+
+## Mission
+This development effort has the mission to massify the adoption of Stacks Decentralized Identifiers (Stacks DID's) facilitated with the actual BNS.
+The BNS names used as user profiles can be used as Single Sign On to thousands of applications.
+
+## Methodology
+To achieve this, we have defined a high level vision, specify the problem, and specify how to solve the problem with Internet, Blockchain, BNS, DID:WEB, user web presence and as Single Sign On solution.
+
