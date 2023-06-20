@@ -158,7 +158,8 @@ Example of the 'did.json' file for 'XCK.app'
     "controller": "did:web:xck.app:oid",
     "stacksAddress": "SP3YK7KWMYRCDMV5M4792T0T7DERQXHJJGGEPV1N8"
 ]
-}```
+}
+```
 
 #### 4.2 The User's Profile document
 Expanding the Internet Domain Names to the users of Decentralized Identifiers (DID)
@@ -242,7 +243,8 @@ Example of the Person JSON web token included in the profile for support.XCK.app
 }
 },
     "signature": "kMzVsEoLOLn3HpsJu2vyY2SHQ_zTQj4-anUihtvDd1G2mkaWcS4Jee57r4M60CU1JA-51J14E7qGj7FwLESELw"
-}```
+}
+```
 
 In case, the did:web does not match the domain name, it could be used with an alternative url.  All Stacks decentralized ID (did:web) have access to the did.json file.
 
@@ -271,7 +273,8 @@ Example of the 'did.json' file for 'support.XCK.app'
     "controller": "did:web:support.xck.app:oid",
     "stacksAddress": "SP3VBHA63ZTZFWTBJWHV775WR3PBZ64B26AYX2CF"
 ]
-}```
+}
+```
 
 This did.json references the blockchain account associated to the DID, and the method to be used to verify if a message hash has been signed by the user.
 
@@ -298,7 +301,8 @@ Example: https://my.xck.app/paradigma.id/.well-known/did.json
     "controller": "did:web:my.xck.app:paradigma.id:oid",
     "stacksAddress": "SP1X4571GM6232GPQ7MW44HGTNX5TH3PKJQR6H7K8"
 ]
-}```
+}
+```
 
 #### A user owned Application Single Sign On (SSO)
 SSO authentication is the process of logging in to a network once and then being able to access all the other systems within the same network using the same credentials. A user can log in once and have access to all the systems associated with their account. SSO authentication is used for cloud-based applications, web applications, and mobile apps and so on.
