@@ -308,7 +308,7 @@ Example: https://my.xck.app/paradigma.id/.well-known/did.json
 }
 ```
 
-#### A user owned Application Single Sign On (SSO)
+#### 4.4 A user owned Application Single Sign On (SSO)
 SSO authentication is the process of logging in to a network once and then being able to access all the other systems within the same network using the same credentials. A user can log in once and have access to all the systems associated with their account. SSO authentication is used for cloud-based applications, web applications, and mobile apps and so on.
 
 Many services are provided through web applications and the number of applications is increasing rapidly. The same sign on login information is also used by many of these users.
