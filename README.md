@@ -141,7 +141,8 @@ Creating a DID is done by: applying at a domain name registrar for use of a doma
 For example, for the domain name 'xck.app', the 'did.json' should be available under the following URL: 'did:web:xck.app' -> https://xck.app/.well-known/did.json
 
 Example of the 'did.json' file for 'XCK.app'
-```{
+```
+{
     "@context": "https://www.w3.org/ns/did/v1",
     "did:web": "xck.app",
     "verificationMethod": [
@@ -175,7 +176,8 @@ Also, this document must include the did-method-web for the app user. For the us
 In this case, the application should also return a JSON web token using the Person Schema object.
 
 Example of the Person JSON web token included in the profile for support.XCK.app
-```{
+```
+{
     "header": {
     "typ": "JWT",
     "alg": "ES256K"
@@ -256,7 +258,8 @@ Creating a DID is done by: applying at a domain name registrar for use of a doma
 For example, for the domain name 'support.xck.app', the DID document should be available under the following URL: 'did:web:support.xck.app' -> https://support.xck.app/.well-known/did.json
 
 Example of the 'did.json' file for 'support.XCK.app'
-```{
+```
+{
     "@context": "https://www.w3.org/ns/did/v1",
     "did:web": "support.xck.app",
     "verificationMethod": [
@@ -284,7 +287,8 @@ In case, the did:web does not match the domain name, it could be used with an al
 
 Example: https://my.xck.app/paradigma.id/.well-known/did.json
 
-```{
+```
+{
     "@context": "https://www.w3.org/ns/did/v1",
     "did:web": "my.xck.app:paradigma.id",
     "verificationMethod": [
