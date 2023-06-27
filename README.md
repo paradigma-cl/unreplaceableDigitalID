@@ -333,7 +333,7 @@ A did:web could bring each individual, business or organization a verified ident
 The web presence inclusion option for every inhabitant of the world could be possible, using the did:web, and their owned SSO to any application.
 Tapscott, describes a higher level of digital capital when applications can integrate to each other.
 
-### 5.	Empowering the DID’s with Proof of the user National Identity
+### 5.	Empowering the DID’s with Proof of the user's National Identity Document
 In some specific use cases, probably, more in the formal space, some legal and business processes, its deliverables, and some cross border transfers, require that the participant users be identified by some valid legal national ID. DID profiles could be ideal to indicate if there is a valid national identity attribution. 
 
 Using a blockchain technological solution to attribute national identity from a national passport or national ID card to a DID can be used by each one of these users, authorizing and linking it to the DID, as a proof of identity. When users are interacting in a transfer or business agreement, this identity attribution could be shared between them. This utility of proof of identity could satisfy KYC (Know Your Customer) requirement of some country governments. In this case, regulation, executed in a decentralized way, controlled, and owned by each user.  
@@ -375,7 +375,7 @@ This attribute of immutability could be transformed in an inscription service ap
 
 The Stacks blockchain smart contracts can leverage the usability of the Bitcoin ecosystem, could help manage the inscription process of Ordinals that has started recently. An inscription is not sufficient as a solution of being the first doing it. It should have management rules, that users abide to, in order to have real meaning, and value. The BNS can be used to acquire, manage, and distribute ordinal inscription, as other type of inscription assets, both in the Stacks or Bitcoin ecosystems.
 
-Inscriptions could be leverage with the use of did:web for the users, and apps. An app inscription or an inscription executed by a user could be accessed publicly by a web service using the did:web protocol. So ideally, Blockchain Inscriptions could be turned into a standard (SIP). This standard could boost usability among other applications that reference this blockchain inscriptions. TXT records could be used at the zone file to connect BNS domains with inscriptions at ordinals.
+Inscriptions could be leverage with the use of did:web for the users, and apps. An app inscription or an inscription executed by a user could be accessed publicly by a web service using the did:web protocol. So ideally, Blockchain Inscriptions could be turned into a standard _Stacks Improvement Proposals_ - SIP. This standard could boost usability among other applications that reference this blockchain inscriptions. TXT records could be used at the zone file to connect BNS domains with inscriptions at ordinals.
 
 ### 8.	DID Domain and subdomain name Exchange of ownership
 A market of exchange of DID domain name is already operating. Since the BNS lets any domain name owner to transfer its property to another user, there has been interest specially among early adopters to save some “key” names for future users, also as the STX exchange value is still low. There have been some proposals to change the behaviour of the BNS to facilitate storing list of domain names for future exchange. An example of an application that tries to help manage and saving different DID domain names is BNSx.
