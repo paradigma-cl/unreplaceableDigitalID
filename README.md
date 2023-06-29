@@ -340,7 +340,7 @@ Using a blockchain technological solution to link a user's national identity doc
 
 The proof identity should be as a National ID Inscription associated to the DID, maintaining privacy, but secure.  The user could share its proofs of identity with the corresponding peers, when necessary, with the correspondent National ID Inscription.
 
-Another complementary Proof of Identity solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking. At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
+Another complementary Proof of Identity solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking, like for example (https://trajan.app). At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
 
 ### 6. Data storage associated to a BNS name
 
