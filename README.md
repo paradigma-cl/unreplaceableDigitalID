@@ -339,11 +339,11 @@ The web presence inclusion option for every inhabitant of the world could be pos
 Tapscott, describes a higher level of digital capital when applications can integrate to each other.
 
 ### 5.	Empowering the DID’s with Proof of the user's National Identity Document
-In some specific use cases, probably, more in the formal space, some legal and business processes, its deliverables, and some cross border transfers, require that the participant users be identified by some valid legal national ID. DID profiles could be ideal to indicate if there is a valid national identity attribution. 
+In some specific use cases, probably, more in the formal space, some legal and business processes, its deliverables, and some cross border transfers, require that the participant users be identified by some valid legal national ID. DID profiles could be ideal to bound them a valid national identity document. 
 
-Using a blockchain technological solution to link a user's national identity document, for example, a national passport or national ID card, permitting a DID to be used by the user,  This is an authorizing and link process to the DID, as a proof of identity. When users are interacting in a transfer or business agreement, this identity attribution could be shared between them. This utility of proof of identity could satisfy KYC (Know Your Customer) requirement of some country governments. In this case, regulation, executed in a decentralized way, controlled, and owned by each user.  
+Using a blockchain technological solution to bound a user's national identity document, for example, a national passport or national ID card, permitting a DID to be used by the user.  This is an authorizing and bound process to the DID, as a proof of identity. When users are interacting in a transfer or business agreement, this identity attribution could be shared between them. This utility of proof of identity could satisfy KYC (Know Your Customer) requirement of some country governments. In this case, regulation, executed in a decentralized way, controlled, and owned by each user.  
 
-The proof identity should be as a National ID Inscription associated to the DID, maintaining privacy, but secure.  The user could share its proofs of identity with the corresponding peers, when necessary, with the correspondent National ID Inscription.
+The proof identity should be an inscription of a DID bound to a National ID document, maintaining privacy, and security.  The user could share its proofs of identity with the corresponding peers, when necessary, with the correspondent National ID Inscription.  This type of inscription could be considered as Soulbound tokens (SBTs), a proposal for enabling non-transferrable cryptoassets that represent commitments, credentials and affiliations.
 
 Another complementary Proof of Identity solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking, like for example (https://trajan.app). At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
 
@@ -377,6 +377,8 @@ A proposal of extending Stacks component was proposed by us in this study (https
 Immutability is an attribute that Blockchain technology offers to world society. A transaction, and/or the execution of a smart contract that cannot be altered.
 
 This attribute of immutability could be transformed in an inscription service applied to different purposes. The first example of this type of service is the BNS, and the second NFT inscriptions for art or music work. Other examples taken from XCK.app are the business Agreements Inscriptions, payments, and business Deliverables Inscriptions. Ordinal inscription is another emerging inscription type stored directly on the Bitcoin blockchain.
+
+Some of these inscriptions could be considered also as Soulbound tokens (SBTs), enabling non-transferrable cryptoassets, specially for business Agreements, and business Deliverables.
 
 The Stacks blockchain smart contracts can leverage the usability of the Bitcoin ecosystem, could help manage the inscription process of Ordinals that has started recently. An inscription is not sufficient as a solution of being the first doing it. It should have management rules, that users abide to, in order to have real meaning, and value. The BNS can be used to acquire, manage, and distribute ordinal inscription, as other type of inscription assets, both in the Stacks or Bitcoin ecosystems.
 
