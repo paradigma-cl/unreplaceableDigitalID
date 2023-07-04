@@ -250,7 +250,7 @@ Example of the Person JSON web token included in the profile for support.XCK.app
 
 In case, the did:web does not match the domain name, it could be used with an alternative url.  All Stacks decentralized ID (did:web) have access to the did.json file.
 
-Example: did:web:my.xck.app/paradigma.id  https://my.xck.app/paradigma.id
+Example: did:web:my.xck.app/paradigma.id --> https://my.xck.app/paradigma.id
 
 #### 4.3 The User did:web DID document
 Creating a DID is done by: applying at a domain name registrar for use of a domain name and storing the location of a hosting service, the IP address at a DNS lookup service creating the DID document JSON-LD file including a suitable keypair, e.g., using the Koblitz Curve, and storing the did.json file under the well-known URL to represent the entire domain.
@@ -323,7 +323,7 @@ The described methods above in 4.3 for verification, and authentication, could s
 
 This Sign On infrastructure does not require to access directly the different blockchain ecosystems, it is through the user published methods.  It is a initial step to massify the adoption of DID’s.
 
-It will be important to define a standard protocol for each of the methods, the verification and authentication.  Probably, the OpenID standard could be used as a base.   But the benefits of using an authentication based on Blockchain is much robust, secure, and private than the traditional methods of authentication.
+It will be important to define a standard protocol for each of the methods, the verification and authentication.  Probably, the OpenID4VC (Open ID for Verifiable Credentials) standard could be used as a base.   But the benefits of using an authentication based on Blockchain is much robust, secure, and private than the traditional methods of authentication.
 
 #### 4.5 Exchange of user profile between Web, Apps and the SSO
 Did:web users can register their ID in compatible applications, probably from different blockchain networks. These applications could retrieve directly the user’s validated profile data, avoiding the re-entry of information to the application. Having also the possibility the ownership of an identity using the verification and authentication methods.
