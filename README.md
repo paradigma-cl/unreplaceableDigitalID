@@ -55,11 +55,16 @@ Several attempts to use cryptographic names have been tested, from the keys they
 Bitcoin Name Service BNS have all these properties, and none of these problems. This makes it a powerful tool for building all kinds of network applications. Using the BNS, the following can be achieved and more:
 
 •	Build domain name services where hostnames cannot be hijacked.
+
 •	Build social media platforms where user names cannot be stolen by phishers.
+
 •	Build version control systems where repository branches do not conflict.
+
 •	Build public-key infrastructure where it is easy for users to discover and remember each other's keys.
 
 Software applications built with the Stacks blockchain integrated, give users control over their digital identities, assets, and data. Unlike most cloud-based apps, they are "decentralized" since they do not depend on any centralized platform, server, or database to function. Rather, they use the Stacks blockchain to authenticate users and facilitate read and write requests for them without any single point of failure or trust.
+
+This kind of ID is called Decentralized ID.  It uses cryptography, digital wallets and related technologies to enable multiple entities to contribute credentials and empower individuals to manage their data. Decentralized ID systems create a trust triangle that links issuers, holders and verifiers: issuers are entities that digitally sign attestations and provide them to holders; holders, such as individuals, manage their credentials and use them to prove claims about their data; and verifiers assess these attestations to determine whether they satisfy requirements. This process, which can be facilitated by a verifiable data registry.
 
 The Stacks blockchain addresses performance problems using a layered approach. The base layer consists of the Stacks blockchain, and the Blockchain Naming System (BNS). The blockchain governs ownership of identities in the Stacks network. Identities can be names such as domain or subdomain names, or application names. 
 
