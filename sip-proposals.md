@@ -1,6 +1,8 @@
 # SIP for Inscribing Immutable Data on Stacks
-Use cases such as inscribing business contracts, commitments, National ID, membership, affiliations to companies.
+## Use cases such as inscribing business contracts, commitments, National ID, membership, affiliations to companies.
+
 by Phillip Roe Smithson (did:web:phillip.xck.app)
+(./sip-inscribing-immutable-data-stacks_proe.jpeg)
 
 Immutability is an attribute that Blockchain technology offers to world society. A transaction, and/or the execution of a smart contract that cannot be altered.
 
