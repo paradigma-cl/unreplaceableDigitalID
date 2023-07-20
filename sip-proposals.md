@@ -2,7 +2,7 @@
 ## Use cases such as inscribing business contracts, commitments, National ID, membership, affiliations to companies.
 
 by Phillip Roe Smithson (did:web:phillip.xck.app)
-(./sip-inscribing-immutable-data-stacks_proe.jpeg)
+![Invitation to Stacks SIP Event Series](./sip-inscribing-immutable-data-stacks_proe.jpeg?raw=true "SIP for Inscribing Inmmutable Data on Stacks-@Phillip Roe")
 
 Immutability is an attribute that Blockchain technology offers to world society. A transaction, and/or the execution of a smart contract that cannot be altered.
 
