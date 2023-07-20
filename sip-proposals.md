@@ -23,11 +23,13 @@ Examples taken from XCK.app are the business Agreements Inscriptions, payments, 
 
 In some specific use cases, probably, more in the formal space, some legal and business processes, its deliverables, and some cross border transfers, require that the participant users be identified by some valid legal national ID. DID profiles could be ideal to bound them a valid national identity document. 
 
+Credentials are a part of our daily lives; driver's licenses are used to assert that we are capable of operating a motor vehicle, university degrees can be used to assert our level of education, and government-issued passports enable us to travel between countries. These credentials provide benefits to us when used in the physical world, but their use on the Web continues to be elusive.
+
 Using a blockchain technological solution to bound a user's national identity document, for example, a national passport or national ID card, permitting a DID to be used by the user.  This is an authorizing and bound process to the DID, as a proof of identity. When users are interacting in a transfer or business agreement, this identity attribution could be shared between them. This utility of proof of identity could satisfy KYC (Know Your Customer) requirement of some country governments. In this case, regulation, executed in a decentralized way, controlled, and owned by each user.  
+
+The proof identity should be an inscription of a DID bound to a National ID document, maintaining privacy, and security.  The user could share its proofs of identity with the corresponding peers, when necessary, with the correspondent National ID Inscription.  This type of inscription could be considered as Soulbound tokens (SBTs), a proposal for enabling non-transferrable cryptoassets that represent commitments, credentials and affiliations.
 
 ## 3. Inscriptions of affiliations to organizations, companies, institutions, and others.
 ### Affiliations
 
-The proof identity should be an inscription of a DID bound to a National ID document, maintaining privacy, and security.  The user could share its proofs of identity with the corresponding peers, when necessary, with the correspondent National ID Inscription.  This type of inscription could be considered as Soulbound tokens (SBTs), a proposal for enabling non-transferrable cryptoassets that represent commitments, credentials and affiliations.
-
-Another complementary Proof of Identity solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking, like for example (https://trajan.app). At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
+A complementary solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking. At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
