@@ -9,7 +9,7 @@ Immutability is an attribute that Blockchain technology offers to world society.
 This attribute of immutability could be transformed in an inscription service applied to different purposes.
 An example of this type of service is the financial value transfer, the Bitcoin Name Service (BNS) domain and subdomain names, and the Non Fungible Tokens (NFT) inscriptions for art or music digital work.
 
-Some newer applications shows that some cryptoassets should be non-transferrable.
+Some newer applications show that some cryptoassets should be non-transferrable.
 Inscriptions could be leverage with the use of did:web for the users, and apps. An app inscription or an inscription executed by a user could be accessed publicly by a web service using the did:web protocol. So ideally, Blockchain Inscriptions could be turned into a standard _Stacks Improvement Proposals_ - SIP. This standard could boost usability among other applications that reference this blockchain inscriptions.
 
 The experience of less of a decade is showing that the Blockchain value finance trades represents humans and their relationships.  The BNS has addressed the need of a verified digital identity, but additionally there is a need to address the social identity.  Social identity means the representation of the relationship between humans.
