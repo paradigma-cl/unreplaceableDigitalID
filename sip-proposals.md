@@ -1,6 +1,6 @@
 # SIP for Inscribing Immutable Data on Stacks
-
 Use cases such as inscribing business contracts, commitments, National ID, membership, affiliations to companies.
+by Phillip Roe Smithson (did:web:phillip.xck.app)
 
 Immutability is an attribute that Blockchain technology offers to world society. A transaction, and/or the execution of a smart contract that cannot be altered.
 
@@ -16,7 +16,11 @@ This proposal tries to cover an initial standard for the Stacks Smart Contracts 
 
 ## 1.	Inscription of Commitments as business Agreements, payments, and business Deliverables.
 ### Commitments
-Examples taken from XCK.app are the business Agreements Inscriptions, payments, and business Deliverables Inscriptions. 
+The act of committing, pledging, or engaging oneself. a pledge or promise; obligation: We have made a commitment to pay our bills on time. dedication.
+
+Commitments have been inscribed in the Blockchain, and some of them could be useful to be accessible by others for different purposes.
+
+Examples taken from XCK.app are the business Agreements, payments, and business Deliverables.
 
 ## 2. Inscriptions of credentials ie Proof of the user's National Identity Document, and other type of identities.
 ### Credentials
@@ -31,5 +35,9 @@ The proof identity should be an inscription of a DID bound to a National ID docu
 
 ## 3. Inscriptions of affiliations to organizations, companies, institutions, and others.
 ### Affiliations
+
+An affiliation is an official connection to something. To have an affiliation to something is to be affiliated with it. You can be connected to all sorts of things, but to have an affiliation is to have an official connection.
+
+The most common affiliation found is the membership to a company team, a community, or to an educational institution.  The affiliation could bring special benefits, services, functionality, informations, among other, to their members.
 
 A complementary solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking. At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
