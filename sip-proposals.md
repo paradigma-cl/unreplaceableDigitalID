@@ -43,3 +43,6 @@ An affiliation is an official connection to something. To have an affiliation to
 The most common affiliation found is the membership to a company team, a community, or to an educational institution.  The affiliation could bring special benefits, services, functionality, informations, among other, to their members.
 
 A complementary solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking. At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
+
+## Resources
+![Presentation to Stacks SIP Event Series](./Paradigma_2023_sip_inmutable_data_rev1.pdf?raw=true "SIP for Inscribing Inmmutable Data on Stacks-@Phillip Roe Presentation")
