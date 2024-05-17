@@ -1,6 +1,6 @@
 # irreplaceableDigitalID
 ## Peers looking for trust in the digitalverse 
-### prepared by CrossCheck-Paradigma
+### prepared by Paradigma
 ## Vision
 In the absence of trust . . . opportunities for mutually beneficial cooperation would have to be foregone . . . norms of social behavior, including ethical and moral codes [may be] . . . reactions of society to compensate for market failures. (Kenneth Arrow wrote in 1971  p. 22) Thus, social preferences such as a concern for the well-being of others and for fair procedures remain essential to sustaining society and enhancing the quality of life. In a world increasingly connected not just by trade in goods but also by the exchange of violence, information, viruses, and emissions, the importance of social preferences in underwriting human cooperation, even survival, may now be greater even than it was among that small group of foragers that began the exodus from Africa 55,000 years ago to spread this particular cooperative species to the far corners of the world.
 Bowles, Samuel; Gintis, Herbert. A Cooperative Species (p. 200). Princeton University Press. Kindle Edition.
