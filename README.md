@@ -61,7 +61,7 @@ Several attempts to use cryptographic names have been tested, from the keys they
 Several types of cryptographic infrastructures are operating on the internet.  
 
 ##### 1.3.1 Public Key Infrastructure (PKI)
-This is a framework used to create, manage, distribute, use, store, and revoke digital certificates and manage public-key encryption. It's widely used for secure electronic communication, such as e-commerce and internet banking.
+This is a framework used to create, manage, distribute, use, store, and revoke digital certificates and manage public-key encryption. It's widely used for secure electronic communication, such as e-commerce and internet banking. (https://en.wikipedia.org/wiki/Public_key_infrastructure)
 
 ##### 1.3.2 Blockchain
 Technologies like Bitcoin and Ethereum are well-known examples. Blockchain provides a decentralized and secure way to record transactions and manage data.
@@ -73,7 +73,7 @@ Solutions like SECRIN are designed to protect cryptographic keys in virtualized 
 
 The emerging of Blockchain became the candidate to implement the association between names and cryptographic keys. Blockchains provide a global append-only log that is publicly writeable. Writes to the global log, called transactions, are organized as blocks and each block packages multiple transactions into a single atomic write. Writing to the global log requires a payment in the form of a transaction fee. 
 
-Blockchain is a large deployment of a decentralized PKI service (https://en.wikipedia.org/wiki/Public_key_infrastructure)
+Blockchain is a large deployment of a decentralized PKI service.
 
 Users can register human meaningful names and securely associate data with them, and only the owner of the particular private keys that registered them can write or update the name-value pair. Many decentralized systems have been and can be built using these blockchain networks, such as new, decentralized versions of DNS and PKI.
 
@@ -103,13 +103,14 @@ The Stacks blockchain addresses performance problems using a layered approach. T
 
 Decentralized Applications (Dapp’s) also called Web3 Apps is the New App that integrates these main functions, authentication, transaction signing, and data storage. All users can run their applications under their own private decentralized space. Each user has access to and/or shares with other users its own private data through the decentralized application. These domain or subdomain names can also use the decentralized names or decentralized IDs, and they are registered to the public key associated to its private key or address, and the IP address location of the Dapp.
 
-
-
 Names in BNS have four properties:
 •	Names are globally unique. The protocol does not allow name collisions, and all well-behaved nodes resolve a given name to the same state.
 •	Names are human-meaningful. Each name is chosen by its creator.
 •	Names are strongly owned. Only the name's owner can change the state it resolves to. A name is owned because the owner of its private key can generate valid transactions that update its zone file hash and ownership. The name zone file can only have a valid verification using the owner’s private key.
 •	Names using its associated public and private key can sign transactions. Only the owner of the name and the associated keys can sign in a verifiable way transactions, and the execution of the smart contracts in a decentralized way. This action represents the unique action of a user, that has access to those keys.
+
+##### 1.4.3 Name Extension
+
 
 ### 2.	Blockchain network interoperability
 A user private and public keys are based from the mathematical, and cryptographical algorithm, and they are to base to use it in the Stacks or Bitcoin blockchain.
