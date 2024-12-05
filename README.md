@@ -33,7 +33,7 @@ An electronic payment system based on cryptographic proof instead of trust could
 Commerce on the Internet has come to rely almost exclusively on financial institutions serving as trusted third parties to process electronic 
 payments. While the system works well enough for most transactions, it still suffers from the inherent weaknesses of the trust-based model. With the possibility of reversal, the need for trust spreads. Merchants must be wary of their customers, hassling them for more information than they would otherwise need. A certain percentage of fraud is accepted as unavoidable. These costs and payment uncertainties can be avoided in person by using physical currency, but no mechanism exists to make payments over a communications channel without a trusted party.
 
-Cryptographic proof. Here is the mathematical “magic” of Bitcoin: the ability to assess the integrity of records and verify new data, instead of relying on the bank, the state, the law or the authority of any other institution.
+Cryptographic proof. Here is the mathematical “magic” of the initial Bitcoin Blockchain: the ability to assess the integrity of records and verify new data, instead of relying on the bank, the state, the law or the authority of any other institution.
 
 How? Cryptographic hashing is a mathematical phenomenon whereby some data is run through a hashing algorithm, which will then output a string of characters. Only this particular data run through this particular hashing algorithm will produce that specific string of characters. What this means is that if the data is tampered with in any way, this can be proven by running it through the hashing algorithm again and checking if the output is the same.  Here is a cryptographic proof.
 
@@ -46,11 +46,35 @@ The Double spending Problem.  How does a decentralised network reach consensus o
 The blockchain and the internet could be applied to different needs of human beings. The first need is for the individual, then agreement between peers.
 
 ### 1.	The use of Internet Identification System
-Your Digital ID or the Digital ID of your organization must be irreplaceable. We must assure a secure world, peaceful, and without setbacks produced by hackers or identity theft.
+Your Personal Digital ID or the Digital ID or name of your organization must be irreplaceable. We must assure a secure world, peaceful, and without setbacks produced by hackers or identity theft.
 
-DNS and social media are based on the Internet domain name system, names are globally unique and human-readable, but not strongly owned. The system operator has the final say as to what each name resolves to. This requires that client must trust the system, and trust that the administrators are the only ones that can make these changes.
+#### 1.1 Domain Name System (DNS)
+The Domain Name System (DNS) turns domain names into IP addresses, which browsers use to load internet pages for example.
 
+Names are globally unique and human-readable, but not strongly owned. The system operator has the final say as to what each name resolves to. This requires that client must trust the system, and trust that the administrators are the only ones that can make these changes.
+
+#### 1.2 Cryptographic Names
 Several attempts to use cryptographic names have been tested, from the keys they reference. But these names are difficult for most users to remember since they do not carry semantic information relating to their use in the system.
+
+#### 1.3 Cryptographic Infrastructure on the Internet
+
+Several types of cryptographic infrastructures are operating on the internet.  
+
+##### 1.3.1 Public Key Infrastructure (PKI)
+This is a framework used to create, manage, distribute, use, store, and revoke digital certificates and manage public-key encryption. It's widely used for secure electronic communication, such as e-commerce and internet banking.
+
+##### 1.3.2 Blockchain
+Technologies like Bitcoin and Ethereum are well-known examples. Blockchain provides a decentralized and secure way to record transactions and manage data.
+
+##### 1.3.3 Secure Cryptography Infrastructures in the Cloud
+Solutions like SECRIN are designed to protect cryptographic keys in virtualized environments, ensuring secure communication and data protection.
+
+The emerging of Blockchain became the candidate to implement the association between names and cryptographic keys. Blockchains provide a global append-only log that is
+publicly writeable. Writes to the global log, called transactions, are organized as blocks and each block packages multiple transactions into a single atomic write. Writing to the global log requires a payment in the form of a transaction fee. (https://www.usenix.org/system/files/conference/atc16/atc16_paper-ali.pdf)
+
+Blockchain is a large deployment of a decentralized PKI service (https://en.wikipedia.org/wiki/Public_key_infrastructure)
+
+Users can register human meaningful names and securely associate data with them, and only the owner of the particular private keys that registered them can write or update the name-value pair. In theory, many decentralized systems can be built using these blockchain networks, such as new, decentralized versions of DNS and PKI.
 
 Bitcoin Name Service BNS have all these properties, and none of these problems. This makes it a powerful tool for building all kinds of network applications. Using the BNS, the following can be achieved and more:
 
