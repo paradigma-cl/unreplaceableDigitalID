@@ -43,7 +43,7 @@ Hashing is a discovery of universal principle that all else can be anchored to; 
 
 The Double spending Problem.  How does a decentralised network reach consensus on which transactions are true? The solution to the double spending problem using peer-to-peer distributed time stamp server to generate computational proof of the chronological order of transactions.  
 
-The blockchain and the internet could be applied to different needs of human beings. The first need is for the individual, then agreement between peers.
+The blockchain and the internet could be applied to different needs of human beings. The first need is for the individual, agreement between peers, and things.
 
 ### 1.	The use of Internet Identification System
 Your Personal Digital ID or the Digital ID or name of your organization must be irreplaceable. We must assure a secure world, peaceful, and without setbacks produced by hackers or identity theft.
@@ -69,14 +69,20 @@ Technologies like Bitcoin and Ethereum are well-known examples. Blockchain provi
 ##### 1.3.3 Secure Cryptography Infrastructures in the Cloud
 Solutions like SECRIN are designed to protect cryptographic keys in virtualized environments, ensuring secure communication and data protection.
 
-The emerging of Blockchain became the candidate to implement the association between names and cryptographic keys. Blockchains provide a global append-only log that is
-publicly writeable. Writes to the global log, called transactions, are organized as blocks and each block packages multiple transactions into a single atomic write. Writing to the global log requires a payment in the form of a transaction fee. (https://www.usenix.org/system/files/conference/atc16/atc16_paper-ali.pdf)
+#### 1.4 Experience Implementing a Naming System on the Blockchain
+
+The emerging of Blockchain became the candidate to implement the association between names and cryptographic keys. Blockchains provide a global append-only log that is publicly writeable. Writes to the global log, called transactions, are organized as blocks and each block packages multiple transactions into a single atomic write. Writing to the global log requires a payment in the form of a transaction fee. 
 
 Blockchain is a large deployment of a decentralized PKI service (https://en.wikipedia.org/wiki/Public_key_infrastructure)
 
-Users can register human meaningful names and securely associate data with them, and only the owner of the particular private keys that registered them can write or update the name-value pair. In theory, many decentralized systems can be built using these blockchain networks, such as new, decentralized versions of DNS and PKI.
+Users can register human meaningful names and securely associate data with them, and only the owner of the particular private keys that registered them can write or update the name-value pair. Many decentralized systems have been and can be built using these blockchain networks, such as new, decentralized versions of DNS and PKI.
 
-Bitcoin Name Service BNS have all these properties, and none of these problems. This makes it a powerful tool for building all kinds of network applications. Using the BNS, the following can be achieved and more:
+##### 1.4.1 Bitcoin Name Service (BNS)
+
+The first name registered in a Bitcoin Blockchain transaction was in 2014, called Namecoin service on the Bitcoin Blockchain. (https://www.usenix.org/system/files/conference/atc16/atc16_paper-ali.pdf).  This service evolved as the Bitcoin Name Service (BNS) on the Blockstack Blockchain. Later, Blockstack Blockchain and rebranded as the Stacks Blockchain, a Bitcoin L2 Blockchain.
+This BNS naming system means that (a) names are human-readable and can be picked by humans, (b) name-value pairs have a strong sense of ownership— that is, they can be owned by cryptographic keypairs, and c) there is no central trusted party or point of failure.
+
+This makes it a powerful tool for building all kinds of network applications. Using the BNS, the following can be achieved and more:
 
 •	Build domain name services where hostnames cannot be hijacked.
 
@@ -86,13 +92,18 @@ Bitcoin Name Service BNS have all these properties, and none of these problems. 
 
 •	Build public-key infrastructure where it is easy for users to discover and remember each other's keys.
 
-Software applications built with the Stacks blockchain integrated, give users control over their digital identities, assets, and data. Unlike most cloud-based apps, they are "decentralized" since they do not depend on any centralized platform, server, or database to function. Rather, they use the Stacks blockchain to authenticate users and facilitate read and write requests for them without any single point of failure or trust.
+Software applications built with the Stacks blockchain (Bitcoin L2) integrated, give users control over their digital identities, assets, and data. Unlike most cloud-based apps, they are "decentralized" since they do not depend on any centralized platform, server, or database to function. Rather, they use the Stacks blockchain to authenticate users and facilitate read and write requests for them without any single point of failure or trust.
 
-This kind of ID is called Decentralized ID.  It uses cryptography, digital wallets and related technologies to enable multiple entities to contribute credentials and empower individuals to manage their data. Decentralized ID systems create a trust triangle that links issuers, holders and verifiers: issuers are entities that digitally sign attestations and provide them to holders; holders, such as individuals, manage their credentials and use them to prove claims about their data; and verifiers assess these attestations to determine whether they satisfy requirements. This process, which can be facilitated by a verifiable data registry.
+The name registry is built with a smart contract that was deployed and runs on the Stacks Blockchain, a Bitcoin L2 Blockchain. The provable smart contract is written in Clarity, a safe, decidable language. The contract links the STX address and the name, domain, and namespace according to the rules about fees and expiry.
 
-The Stacks blockchain addresses performance problems using a layered approach. The base layer consists of the Stacks blockchain, and the Blockchain Naming System (BNS). The blockchain governs ownership of identities in the Stacks network. Identities can be names such as domain or subdomain names, or application names. 
+##### 1.4.2 Decentralized Name or Decentralized ID
+This kind of name can be called Decentralized ID or Decentralized Name.  It uses cryptography, digital wallets and related technologies to enable multiple entities to produce credentials and empower individuals to manage their data. Decentralized ID systems create a trust triangle that links issuers, holders and verifiers: issuers are entities that digitally sign attestations and provide them to holders; holders, such as individuals, manage their credentials and use them to prove claims about their data; and verifiers assess these attestations to determine whether they satisfy requirements. This process, which is facilitated by a verifiable data registry.
 
-Decentralized Applications (Dapp’s) is the New App that integrates these main functions, authentication, transaction signing, and data storage. All users can run their applications under their own private decentralized space. Each user has access to and/or shares with other users its own private data through the decentralized application. These domain or subdomain names are called decentralized names or decentralized IDs, and they are registered to the public key associated to its private key or address, through a name registry implemented in a smart contract on Stacks, secured by Bitcoin. The provable smart contract is written in Clarity, a safe, decidable language. The contract links the STX address and the username according to the rules about fees and expiry.
+The Stacks blockchain addresses performance problems using a layered approach. The base layer consists of the Stacks blockchain, and the Blockchain Naming System (BNS). The blockchain governs ownership of identities in the Stacks network. Identities can be names such as namespaces, domain or subdomain names, or application names. 
+
+Decentralized Applications (Dapp’s) also called Web3 Apps is the New App that integrates these main functions, authentication, transaction signing, and data storage. All users can run their applications under their own private decentralized space. Each user has access to and/or shares with other users its own private data through the decentralized application. These domain or subdomain names can also use the decentralized names or decentralized IDs, and they are registered to the public key associated to its private key or address, and the IP address location of the Dapp.
+
+
 
 Names in BNS have four properties:
 •	Names are globally unique. The protocol does not allow name collisions, and all well-behaved nodes resolve a given name to the same state.
