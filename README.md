@@ -53,23 +53,48 @@ The Domain Name System (DNS) turns domain names into IP addresses, which browser
 
 Names are globally unique and human-readable, but not strongly owned. The system operator has the final say as to what each name resolves to. This requires that client must trust the system, and trust that the administrators are the only ones that can make these changes.
 
-#### 1.2 Cryptographic Names
+#### 1.2 Domain Name System Zone File
+A Domain Name System (DNS) zone file is a text file that describes a DNS zone. A DNS zone is a subset, often a single domain, of the hierarchical domain name structure of the DNS. The zone file contains mappings between domain names and IP addresses and other resources, organized in the form of text representations of resource records (RR). (https://en.wikipedia.org/wiki/Zone_file)
+
+The zone file has to follow an agreed format (https://datatracker.ietf.org/doc/html/rfc1035)
+
+An example of a zone file for the domain example.com is the following:
+
+$ORIGIN example.com.     ; designates the start of this zone file in the namespace
+$TTL 3600                ; default expiration time (in seconds) of all RRs without their own TTL value
+example.com.  IN  SOA   ns.example.com. username.example.com. ( 2020091025 7200 3600 1209600 3600 )
+example.com.  IN  NS    ns                    ; ns.example.com is a nameserver for example.com
+example.com.  IN  NS    ns.somewhere.example. ; ns.somewhere.example is a backup nameserver for example.com
+example.com.  IN  MX    10 mail.example.com.  ; mail.example.com is the mailserver for example.com
+@             IN  MX    20 mail2.example.com. ; equivalent to above line, "@" represents zone origin
+@             IN  MX    50 mail3              ; equivalent to above line, but using a relative host name
+example.com.  IN  A     192.0.2.1             ; IPv4 address for example.com
+              IN  AAAA  2001:db8:10::1        ; IPv6 address for example.com
+ns            IN  A     192.0.2.2             ; IPv4 address for ns.example.com
+              IN  AAAA  2001:db8:10::2        ; IPv6 address for ns.example.com
+www           IN  CNAME example.com.          ; www.example.com is an alias for example.com
+wwwtest       IN  CNAME www                   ; wwwtest.example.com is another alias for www.example.com
+mail          IN  A     192.0.2.3             ; IPv4 address for mail.example.com
+mail2         IN  A     192.0.2.4             ; IPv4 address for mail2.example.com
+mail3         IN  A     192.0.2.5             ; IPv4 address for mail3.example.com
+
+### 2. The use of Cryptographic Keys to Represent Names
 Several attempts to use cryptographic names have been tested, from the keys they reference. But these names are difficult for most users to remember since they do not carry semantic information relating to their use in the system.
 
-#### 1.3 Cryptographic Infrastructure on the Internet
+#### 2.1 Cryptographic Infrastructure on the Internet
 
 Several types of cryptographic infrastructures are operating on the internet.  
 
-##### 1.3.1 Public Key Infrastructure (PKI)
+##### 2.1.1 Public Key Infrastructure (PKI)
 This is a framework used to create, manage, distribute, use, store, and revoke digital certificates and manage public-key encryption. It's widely used for secure electronic communication, such as e-commerce and internet banking. (https://en.wikipedia.org/wiki/Public_key_infrastructure)
 
-##### 1.3.2 Blockchain
+##### 2.1.2 Blockchain
 Technologies like Bitcoin and Ethereum are well-known examples. Blockchain provides a decentralized and secure way to record transactions and manage data.
 
-##### 1.3.3 Secure Cryptography Infrastructures in the Cloud
+##### 2.1.3 Secure Cryptography Infrastructures in the Cloud
 Solutions like SECRIN are designed to protect cryptographic keys in virtualized environments, ensuring secure communication and data protection.
 
-#### 1.4 Experience Implementing a Naming System on the Blockchain
+#### 2.2 Experience Implementing a Naming System on the Blockchain
 
 The emerging of Blockchain became the candidate to implement the association between names and cryptographic keys. Blockchains provide a global append-only log that is publicly writeable. Writes to the global log, called transactions, are organized as blocks and each block packages multiple transactions into a single atomic write. Writing to the global log requires a payment in the form of a transaction fee. 
 
@@ -77,7 +102,7 @@ Blockchain is a large deployment of a decentralized PKI service.
 
 Users can register human meaningful names and securely associate data with them, and only the owner of the particular private keys that registered them can write or update the name-value pair. Many decentralized systems have been and can be built using these blockchain networks, such as new, decentralized versions of DNS and PKI.
 
-##### 1.4.1 Bitcoin Name Service (BNS)
+##### 2.2.1 Bitcoin Name Service (BNS)
 
 The first name registered in a Bitcoin Blockchain transaction was in 2014, called Namecoin service on the Bitcoin Blockchain. (https://www.usenix.org/system/files/conference/atc16/atc16_paper-ali.pdf).  This service evolved as the Bitcoin Name Service (BNS) on the Blockstack Blockchain. Later, Blockstack Blockchain and rebranded as the Stacks Blockchain, a Bitcoin L2 Blockchain.
 This BNS naming system means that (a) names are human-readable and can be picked by humans, (b) name-value pairs have a strong sense of ownership— that is, they can be owned by cryptographic keypairs, and c) there is no central trusted party or point of failure.
@@ -96,7 +121,7 @@ Software applications built with the Stacks blockchain (Bitcoin L2) integrated, 
 
 The name registry is built with a smart contract that was deployed and runs on the Stacks Blockchain, a Bitcoin L2 Blockchain. The provable smart contract is written in Clarity, a safe, decidable language. The contract links the STX address and the name, domain, and namespace according to the rules about fees and expiry.
 
-##### 1.4.2 Decentralized Name or Decentralized ID
+##### 2.2.2 Decentralized Name or Decentralized ID
 This kind of name can be called Decentralized ID or Decentralized Name.  It uses cryptography, digital wallets and related technologies to enable multiple entities to produce credentials and empower individuals to manage their data. Decentralized ID systems create a trust triangle that links issuers, holders and verifiers: issuers are entities that digitally sign attestations and provide them to holders; holders, such as individuals, manage their credentials and use them to prove claims about their data; and verifiers assess these attestations to determine whether they satisfy requirements. This process, which is facilitated by a verifiable data registry.
 
 The Stacks blockchain addresses performance problems using a layered approach. The base layer consists of the Stacks blockchain, and the Blockchain Naming System (BNS). The blockchain governs ownership of identities in the Stacks network. Identities can be names such as namespaces, domain or subdomain names, or application names. 
@@ -109,34 +134,34 @@ Names in BNS have four properties:
 •	Names are strongly owned. Only the name's owner can change the state it resolves to. A name is owned because the owner of its private key can generate valid transactions that update its zone file hash and ownership. The name zone file can only have a valid verification using the owner’s private key.
 •	Names using its associated public and private key can sign transactions. Only the owner of the name and the associated keys can sign in a verifiable way transactions, and the execution of the smart contracts in a decentralized way. This action represents the unique action of a user, that has access to those keys.
 
-##### 1.4.3 Name Extension
+##### 2.2.3 Name Extension
 
 
-### 2.	Blockchain network interoperability
+### 3.	Blockchain network interoperability
 A user private and public keys are based from the mathematical, and cryptographical algorithm, and they are to base to use it in the Stacks or Bitcoin blockchain.
 
-#### 2.1 Stacks address
+#### 3.1 Stacks address
 From a private key the user can derive a decidable public key in a Stacks address format, and in several Bitcoin addresses format. Actual Stacks 2.1 have methods accepting more BTC address formats (P2PKH, P2SH, P2WPKH, P2WSH, P2TR). A Stacks address starts with a “SP”. 
 
-#### 2.2 Bitcoin address
+#### 3.2 Bitcoin address
 Initially, the Bitcoin address was based on the legacy address P2PKH starting with a “1”, the actual ones are based on SegWit address P2WPKH starting with a “bc1”, and Taproot address when massively available starting with a “bc1p”. 
 
-#### 2.3 Both Stacks and Bitcoin addresses are linked together
+#### 3.3 Both Stacks and Bitcoin addresses are linked together
 These addresses are mathematically or cryptographically linked together as one or the same, but they are used in the Stacks or Bitcoin blockchain ecosystem respectively.
 
-#### 2.4 Domain and subdomain names can be associated to a Stacks and Bitcoin address
+#### 3.4 Domain and subdomain names can be associated to a Stacks and Bitcoin address
 The Stacks blockchain ensures that each node's BNS view is synchronized to all the other nodes in the world, so queries on one node will be the same on other nodes. Stacks blockchain nodes allow a name's owner to bind up to 40Kb of off-chain state to their name, which will be replicated to all other Stacks blockchain nodes via a P2P network.
 
 The biggest consequence for developers is that in BNS, reading name state is fast and cheap but writing name state is slow and expensive. This is because registering and modifying names requires one or more transactions to be sent to the underlying blockchain, and BNS nodes will not process them until they are sufficiently confirmed. Users and developers need to acquire and spend the requisite cryptocurrency (STX) to send BNS transactions. At another level, the different applications could interact among them exchanging information. In order to use these capabilities, a set of standard verifiable digital identities should be used integrated into the web to have a secure and private interaction.
 
-#### 2.5 To commit changes in the Blockchain requires the use of a Stacks Wallet Applications
+#### 3.5 To commit changes in the Blockchain requires the use of a Stacks Wallet Applications
 A request for a transaction or change of state of the Blockchain requires the use of the private key to sign, and funds as gas to materialize the order.  To improve security, and reduce the risk of losing control of the private key of an account, different methods have been developed, trying to avoid entering it directly to the application.
 
 For the use of web applications, it requires the use of a browser wallet software plugin, that has access to the private key directly or using a hardware device.
 
 At present in the Stacks ecosystem, there are two browser wallet software available.  One is the Hiro Wallet (https://wallet.hiro.so/) for desktop PC’s, and Xverse Wallet (https://www.xverse.app/) for mobile devices.
 
-### 3.	Definition of a public accessible digital app’s profile, and user’s profile
+### 4.	Definition of a public accessible digital app’s profile, and user’s profile
 The Stacks zone files have the capabilities, and the tools to define the profiles for the application itself, and each of its users, depending on the application to identify its subjects, in a decentralized way using the Internet.
 
 The W3C (https://www.w3.org) recommends Decentralized identifiers (DIDs), as a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides to identify. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. DIDs are URIs that associate a DID subject with a DID document allowing trustable interactions associated with that subject. Each DID document can express cryptographic material, verification methods, or services, which provide a set of mechanisms enabling a DID controller to prove control of the DID.
@@ -145,7 +170,7 @@ The DIDs for a person for example, are expressed through a name and an image, so
 
 The Stacks public DIDs is a profile that is registered with a username on-chain using the BNS (Blockchain Naming System) smart contract. These profiles are defined using the JSON web token, and its contents using the appropriate objects of the Schema standard (https://schema.org), like the person object (https://schema.org/Person).
 
-#### 3.1 BNS and DID Standards
+#### 4.1 BNS and DID Standards
 BNS names can be compliant with the emerging Decentralized Identity Foundation (identity.foundation) protocol specification for decentralized identifiers (DIDs), and the W3C foundation. These initiatives define mechanisms by which an End-User can leverage an open provider to release identity information (such as authentication and claims) to a Relying Party which can act on that information.
 
 Each name in BNS has an associated DID. The DID format for BNS is:
@@ -156,27 +181,27 @@ Where:
 •	{address} is an on-chain public key hash (for example a Stacks or Bitcoin address).
 •	{index} refers to the nth name this address created.
 
-#### 3.2 Using the Internet domain names to verify decentralized domain and subdomain names
+#### 4.2 Using the Internet domain names to verify decentralized domain and subdomain names
 To incentivize mass adoption of DIDs, one initial strategy is to link both Internet Domain Names to DIDs, both referring to each other, in the BNS zone file a reference to a web server, and in the Internet domain server referring to the respective DID. Mixing a centralized domain names with the decentralized domain names. For example, the Internet domain name XCK.app refers to the Stacks DID XCK.app, and both are owned by the same controller. In this case, the controller should be the dapp.
 
 This strategy is ratified by a recent proposal in using a new DID method in conjunction with blockchain-based DIDs that allows them to bootstrap trust using a web domain's existing reputation (https://w3c-ccg.github.io/did-method-web).
 
-#### 3.3 Extending the naming characters for the domain and subdomain names
+#### 4.3 Extending the naming characters for the domain and subdomain names
 Typically, the domain and subdomain names have commonly used Latin characters in ascii format. Due to the convergence of the use of different languages, and character systems, the popularity in social apps, people have started to think about using emoji as names for their domains or subdomains. 
 
 The compatibility of the dapps with Punycode could be a facilitator of mass user adoption. For example: 🧑‍💼 .xck.app is represented as xn-- -zc3sr5i.xck.app
 
-#### 3.4 Extending the use the private public keys for both Stacks and Bitcoin blockchains
+#### 4.4 Extending the use the private public keys for both Stacks and Bitcoin blockchains
 In order to have higher level of adoption, increases the desire to have communications, and interoperability between users cross blockchains ecosystems like Stacks, and Bitcoin. One example, is Nostr, that uses the public key as unique identifier, that is linked to the DNS.
 
-### 4.	The App Profile
+### 5.	The App Profile
 Each App (web application) should have a verified identity in order to safely reference it and be trustworthy of interaction between other applications. An app can be identified both by the Internet domain (DNS) for example 'XCK.app' and the Stacks DID 'XCK.app' In case, it is a web application, it could be accessed as https://xck.app having both definitions.  In this case, we using the trust of the Internet domains to match the Decentralized Domains (DID).
 
 The description for an App Profile document should be done using a JSON web token based on the WebApplication Schema object (https://schema.org/WebApplication). Additionally, this App Profile document must include the did-method-web. The example is represented as 'did:web:xck.app'. The target system of the Web DID method is the web host that the domain name described by the DID resolves to when queried through the Domain Name System (DNS). This did-method-web must be included in this app profile.
 
 It could be useful to have a way to retrieve a verifiable DID profile for the App as recommended by the W3C using an URI. For example, a web URI https://xck.app?.well-know/profile In this case, the application should also return a JSON web token using the protocol previously mentioned.
 
-#### 4.1 The App did:web DID document
+#### 5.1 The App did:web DID document
 Creating a DID is done by: applying at a domain name registrar for use of a domain name and storing the location of a hosting service, the IP address at a DNS lookup service creating the DID document JSON-LD file including a suitable keypair, e.g., using the Koblitz Curve, and storing the did.json file under the well-known URL to represent the entire domain.
 
 For example, for the domain name 'xck.app', the 'did.json' should be available under the following URL: 'did:web:xck.app' -> https://xck.app/.well-known/did.json
@@ -203,7 +228,7 @@ Example of the 'did.json' file for 'XCK.app'
 }
 ```
 
-#### 4.2 The User's Profile document
+#### 5.2 The User's Profile document
 Expanding the Internet Domain Names to the users of Decentralized Identifiers (DID)
 For the users of each App (web application), the App could provide a verified user identity in order to safely reference across other applications. In this context, the DIDs are URIs that associate a DID subject as a user of the application with a DID document allowing trustable interactions associated with that subject.
 
@@ -293,7 +318,7 @@ In case, the did:web does not match the domain name, it could be used with an al
 
 Example: did:web:my.xck.app/paradigma.id --> https://my.xck.app/paradigma.id
 
-#### 4.3 The User did:web DID document
+#### 5.3 The User did:web DID document
 Creating a DID is done by: applying at a domain name registrar for use of a domain name and storing the location of a hosting service, the IP address at a DNS lookup service creating the DID document JSON-LD file including a suitable keypair, e.g., using the Koblitz Curve, and storing the did.json file under the well-known URL to represent the entire domain.
 
 For example, for the domain name 'support.xck.app', the DID document should be available under the following URL: 'did:web:support.xck.app' -> https://support.xck.app/.well-known/did.json
@@ -349,7 +374,7 @@ Example: https://my.xck.app/paradigma.id/.well-known/did.json
 }
 ```
 
-#### 4.4 A user owned Application Single Sign On (SSO)
+#### 5.4 A user owned Application Single Sign On (SSO)
 SSO authentication is the process of logging in to a network once and then being able to access all the other systems within the same network using the same credentials. A user can log in once and have access to all the systems associated with their account. SSO authentication is used for cloud-based applications, web applications, and mobile apps and so on.
 
 Many services are provided through web applications and the number of applications is increasing rapidly. The same sign on login information is also used by many of these users.
@@ -366,7 +391,7 @@ This Sign On infrastructure does not require to access directly the different bl
 
 It will be important to define a standard protocol for each of the methods, the verification and authentication.  Probably, the OpenID4VC (Open ID for Verifiable Credentials) standard could be used as a base.   But the benefits of using an authentication based on Blockchain is much robust, secure, and private than the traditional methods of authentication.
 
-#### 4.5 Exchange of user profile between Web, Apps and the SSO
+#### 5.5 Exchange of user profile between Web, Apps and the SSO
 Did:web users can register their ID in compatible applications, probably from different blockchain networks. These applications could retrieve directly the user’s validated profile data, avoiding the re-entry of information to the application. Having also the possibility the ownership of an identity using the verification and authentication methods.
 
 A did:web could bring each individual, business or organization a verified identity web presence. Or, to share their contact details, kind a visiting card, but digital and verified.
@@ -374,7 +399,7 @@ A did:web could bring each individual, business or organization a verified ident
 The web presence inclusion option for every inhabitant of the world could be possible, using the did:web, and their owned SSO to any application.
 Tapscott, describes a higher level of digital capital when applications can integrate to each other.
 
-### 5.	Empowering the DID’s with Proof of the user's National Identity Document
+### 6.	Empowering the DID’s with Proof of the user's National Identity Document
 In some specific use cases, probably, more in the formal space, some legal and business processes, its deliverables, and some cross border transfers, require that the participant users be identified by some valid legal national ID. DID profiles could be ideal to bound them a valid national identity document. 
 
 Using a blockchain technological solution to bound a user's national identity document, for example, a national passport or national ID card, permitting a DID to be used by the user.  This is an authorizing and bound process to the DID, as a proof of identity. When users are interacting in a transfer or business agreement, this identity attribution could be shared between them. This utility of proof of identity could satisfy KYC (Know Your Customer) requirement of some country governments. In this case, regulation, executed in a decentralized way, controlled, and owned by each user.  
@@ -383,7 +408,7 @@ The proof identity should be an inscription of a DID bound to a National ID docu
 
 Another complementary Proof of Identity solution could be done by the reference of other users, that they know a certain user. Kind of a reputation ranking, like for example (https://trajan.app). At a certain, point one or more of the sponsoring users must have a more solid proof of identity issued by a valid legal national ID. These referrals can also be indicated in the user profile.
 
-### 6. Data storage associated to a BNS name
+### 7. Data storage associated to a BNS name
 
 Apps built with the Stacks blockchain can store off-chain data using a storage system called GAIA (by Stacks).
 GAIA is a unique approach to decentralized storage that focuses primarily on user-ownership of data, rather than immutable on-chain storage. In this case the emphasis is on the user control.
