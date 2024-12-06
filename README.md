@@ -134,8 +134,41 @@ Names in BNS have four properties:
 •	Names are strongly owned. Only the name's owner can change the state it resolves to. A name is owned because the owner of its private key can generate valid transactions that update its zone file hash and ownership. The name zone file can only have a valid verification using the owner’s private key.
 •	Names using its associated public and private key can sign transactions. Only the owner of the name and the associated keys can sign in a verifiable way transactions, and the execution of the smart contracts in a decentralized way. This action represents the unique action of a user, that has access to those keys.
 
-##### 2.2.3 Name Extension
+##### 2.2.3 Challenges of a Naming System on Blockchain
+Building systems with blockchains presents challenges:
+• Limits on Data Storage: Individual blockchain records are typically on the order of kilobytes and cannot hold much data. Moreover, the blockchain’s log structure implies that all state changes are recorded in the blockchain. All nodes participating in the network need to maintain a full copy of the blockchain, limiting the total size of blockchains to what current commodity hardware can support. 
+• Slow Writes: The transaction processing rate is capped by the blockchain’s write propagation and leader election protocol, and it is pegged to the rate at which new blocks are announced by leader nodes, called miners in many blockchain networks. New transactions can take minutes to a few hours to be accepted.
+• Limited Bandwidth: The total number of transactions per block is limited by the block size of blockchains.
+To maintain fairness and to give all nodes a chance to become leader in the next round, all nodes should receive a newly announced block at roughly the same time. Therefore, the block size is typically limited by average uplink bandwidth of nodes. 
+• Endless Ledger: The integrity of blockchains depends on the ability for anyone to audit them back to the first block. As the system makes forward progress and issues new blocks, the cost of an audit grows linearly with time, which makes booting up new nodes progressively more time consuming. We call this the endless ledger problem. 
 
+##### 2.2.4 Challenges of a Naming System on Blockchain
+Relying on the consensus protocol of the underlying blockchain, there is an opportunity to provide a total ordering for all operations supported by the naming system, like name registrations, updates and transfers.
+Separation of the Control and Data Plane: Decoupling the security of name registration and
+name ownership from the availability of data associated with names by separating the control and data planes.
+The control plane defines the protocol for registering human-readable names, creating (name, hash) bindings, and creating bindings to owning cryptographic keypairs
+
+##### 2.2.5 Architecture for a Naming System on Blockchain
+
+
+##### 2.2.6 Decentralized Identifiers
+
+The W3C (https://www.w3.org/TR/did-core/) recommends Decentralized identifiers (DIDs), as a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides to identify. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. DIDs are URIs that associate a DID subject with a DID document allowing trustable interactions associated with that subject. Each DID document can express cryptographic material, verification methods, or services, which provide a set of mechanisms enabling a DID controller to prove control of the DID.
+
+The DIDs for a person for example, are expressed through a name and an image, sometimes a description, background image, url, email, password signature, etc. The visual and textual representation of an account, helps users to better recognize their own accounts, from the accounts of other users. Stacks has a long history of Decentralized Identifiers (DIDs) as they introduced human readable names for bitcoin addresses when the project started as “One Name” back in 2014.
+
+The Stacks public DIDs is a profile that is registered with a username on-chain using the BNS (Blockchain Naming System) smart contract. These profiles are defined using the JSON web token, and its contents using the appropriate objects of the Schema standard (https://schema.org), like the person object (https://schema.org/Person).
+
+#### 4.1 BNS and DID Standards
+BNS names can be compliant with the emerging Decentralized Identity Foundation (identity.foundation) protocol specification for decentralized identifiers (DIDs), and the W3C foundation. These initiatives define mechanisms by which an End-User can leverage an open provider to release identity information (such as authentication and claims) to a Relying Party which can act on that information.
+
+Each name in BNS has an associated DID. The DID format for BNS is:
+•	did:stack:v2:{address}-{index}
+•	did:btc-addr:{address}-{index}
+
+Where:
+•	{address} is an on-chain public key hash (for example a Stacks or Bitcoin address).
+•	{index} refers to the nth name this address created.
 
 ### 3.	Blockchain network interoperability
 A user private and public keys are based from the mathematical, and cryptographical algorithm, and they are to base to use it in the Stacks or Bitcoin blockchain.
@@ -160,26 +193,6 @@ A request for a transaction or change of state of the Blockchain requires the us
 For the use of web applications, it requires the use of a browser wallet software plugin, that has access to the private key directly or using a hardware device.
 
 At present in the Stacks ecosystem, there are two browser wallet software available.  One is the Hiro Wallet (https://wallet.hiro.so/) for desktop PC’s, and Xverse Wallet (https://www.xverse.app/) for mobile devices.
-
-### 4.	Definition of a public accessible digital app’s profile, and user’s profile
-The Stacks zone files have the capabilities, and the tools to define the profiles for the application itself, and each of its users, depending on the application to identify its subjects, in a decentralized way using the Internet.
-
-The W3C (https://www.w3.org) recommends Decentralized identifiers (DIDs), as a new type of identifier that enables verifiable, decentralized digital identity. A DID identifies any subject (e.g., a person, organization, thing, data model, abstract entity, etc.) that the controller of the DID decides to identify. In contrast to typical, federated identifiers, DIDs have been designed so that they may be decoupled from centralized registries, identity providers, and certificate authorities. DIDs are URIs that associate a DID subject with a DID document allowing trustable interactions associated with that subject. Each DID document can express cryptographic material, verification methods, or services, which provide a set of mechanisms enabling a DID controller to prove control of the DID.
-
-The DIDs for a person for example, are expressed through a name and an image, sometimes a description, background image, url, email, password signature, etc. The visual and textual representation of an account, helps users to better recognize their own accounts, from the accounts of other users. Stacks has a long history of Decentralized Identifiers (DIDs) as they introduced human readable names for bitcoin addresses when the project started as “One Name” back in 2014.
-
-The Stacks public DIDs is a profile that is registered with a username on-chain using the BNS (Blockchain Naming System) smart contract. These profiles are defined using the JSON web token, and its contents using the appropriate objects of the Schema standard (https://schema.org), like the person object (https://schema.org/Person).
-
-#### 4.1 BNS and DID Standards
-BNS names can be compliant with the emerging Decentralized Identity Foundation (identity.foundation) protocol specification for decentralized identifiers (DIDs), and the W3C foundation. These initiatives define mechanisms by which an End-User can leverage an open provider to release identity information (such as authentication and claims) to a Relying Party which can act on that information.
-
-Each name in BNS has an associated DID. The DID format for BNS is:
-•	did:stack:v2:{address}-{index}
-•	did:btc-addr:{address}-{index}
-
-Where:
-•	{address} is an on-chain public key hash (for example a Stacks or Bitcoin address).
-•	{index} refers to the nth name this address created.
 
 #### 4.2 Using the Internet domain names to verify decentralized domain and subdomain names
 To incentivize mass adoption of DIDs, one initial strategy is to link both Internet Domain Names to DIDs, both referring to each other, in the BNS zone file a reference to a web server, and in the Internet domain server referring to the respective DID. Mixing a centralized domain names with the decentralized domain names. For example, the Internet domain name XCK.app refers to the Stacks DID XCK.app, and both are owned by the same controller. In this case, the controller should be the dapp.
